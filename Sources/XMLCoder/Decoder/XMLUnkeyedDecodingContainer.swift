@@ -103,6 +103,8 @@ struct XMLUnkeyedDecodingContainer: UnkeyedDecodingContainer {
         }
 
         var value: T?
+
+        // FIXME: Handle SingleBox decodings in a self-contained manner.
         if let singleKeyed = box as? SingleKeyedBox {
             do {
                 value = try decode(decoder, singleKeyed)
@@ -111,9 +113,14 @@ struct XMLUnkeyedDecodingContainer: UnkeyedDecodingContainer {
                     // Drill down to the element in the case of an nested unkeyed element
                     value = try decode(decoder, singleKeyed.element)
                 } catch {
-                // Specialize for choice elements
-                value = try decode(decoder, ChoiceBox(key: singleKeyed.key, element: singleKeyed.element))
-                }
+                    do {
+                        // Handle self-closing elements as enums with raw values (e.g., `<orange/>`)
+                        value = try decode(decoder, StringBox(singleKeyed.key))
+                    } catch {
+                        // Specialize for choice elements
+                        value = try decode(decoder, ChoiceBox(key: singleKeyed.key, element: singleKeyed.element))
+                        }
+                    }
             }
         } else {
             value = try decode(decoder, box)

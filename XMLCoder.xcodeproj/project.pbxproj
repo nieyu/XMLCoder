@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		07DEA42C234E783F0001A014 /* SelfClosingEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DEA42B234E783F0001A014 /* SelfClosingEnumTests.swift */; };
 		07E441BA2340F14B00890F46 /* EmptyElementEmptyStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E441B92340F14B00890F46 /* EmptyElementEmptyStringTests.swift */; };
 		B54555BC2343F5C1000D4128 /* EmptyArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54555BB2343F5C1000D4128 /* EmptyArrayTest.swift */; };
 		B5EA3BB6230F237800D8D69B /* NestedChoiceArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA3BB4230F235C00D8D69B /* NestedChoiceArrayTest.swift */; };
@@ -155,6 +156,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07DEA42B234E783F0001A014 /* SelfClosingEnumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfClosingEnumTests.swift; sourceTree = "<group>"; };
 		07E441B92340F14B00890F46 /* EmptyElementEmptyStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyElementEmptyStringTests.swift; sourceTree = "<group>"; };
 		B54555BB2343F5C1000D4128 /* EmptyArrayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyArrayTest.swift; sourceTree = "<group>"; };
 		B5EA3BB4230F235C00D8D69B /* NestedChoiceArrayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedChoiceArrayTest.swift; sourceTree = "<group>"; };
@@ -442,6 +444,7 @@
 				OBJ_115 /* NestedAttributeChoiceTests.swift */,
 				OBJ_116 /* NestedChoiceTests.swift */,
 				OBJ_117 /* NestingTests.swift */,
+				07DEA42B234E783F0001A014 /* SelfClosingEnumTests.swift */,
 				OBJ_118 /* NodeEncodingStrategyTests.swift */,
 				OBJ_119 /* NoteTest.swift */,
 				OBJ_120 /* PlantCatalog.swift */,
@@ -702,6 +705,7 @@
 				OBJ_227 /* SharedBoxTests.swift in Sources */,
 				OBJ_228 /* StringBoxTests.swift in Sources */,
 				OBJ_229 /* UIntBoxTests.swift in Sources */,
+				07DEA42C234E783F0001A014 /* SelfClosingEnumTests.swift in Sources */,
 				OBJ_230 /* URLBoxTests.swift in Sources */,
 				OBJ_231 /* UnkeyedBoxTests.swift in Sources */,
 				OBJ_232 /* BreakfastTest.swift in Sources */,
