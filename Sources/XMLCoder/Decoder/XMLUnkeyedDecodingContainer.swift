@@ -118,9 +118,12 @@ struct XMLUnkeyedDecodingContainer: UnkeyedDecodingContainer {
                         value = try decode(decoder, StringBox(singleKeyed.key))
                     } catch {
                         // Specialize for choice elements
-                        value = try decode(decoder, ChoiceBox(key: singleKeyed.key, element: singleKeyed.element))
-                        }
+                        value = try decode(
+                            decoder,
+                            ChoiceBox(key: singleKeyed.key, element: singleKeyed.element)
+                        )
                     }
+                }
             }
         } else {
             value = try decode(decoder, box)
